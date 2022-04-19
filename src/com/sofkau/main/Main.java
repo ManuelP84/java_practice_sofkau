@@ -52,6 +52,11 @@ public class Main {
                 exercise9.replaceLetter();
                 exercise9.concatPhrase();
             case 10:
+                Exercise10 exercise10 = new Exercise10();
+                exercise10.requestPhrase();
+                String phrase = exercise10.deleteSpaces();
+                exercise10.showPhrase(phrase);
+
 
         }
     }
@@ -68,6 +73,7 @@ public class Main {
         System.out.println("7. Number greater or equal 0");
         System.out.println("8. Is labor day");
         System.out.println("9. Replace 'a' with 'e' ");
+        System.out.println("10. Delete spaces");
         System.out.print("Option: ");
     }
 
