@@ -56,7 +56,12 @@ public class Main {
                 exercise10.requestPhrase();
                 String phrase = exercise10.deleteSpaces();
                 exercise10.showPhrase(phrase);
-
+            case 11:
+                Exercise11 exercise11 = new Exercise11();
+                exercise11.requestPhrase();
+                exercise11.getPhraseSize();
+                exercise11.countVowels();
+                exercise11.showDetailVowels();
 
         }
     }
@@ -74,6 +79,7 @@ public class Main {
         System.out.println("8. Is labor day");
         System.out.println("9. Replace 'a' with 'e' ");
         System.out.println("10. Delete spaces");
+        System.out.println("11. Count total vowels of a phrase");
         System.out.print("Option: ");
     }
 
