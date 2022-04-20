@@ -62,7 +62,12 @@ public class Main {
                 exercise11.getPhraseSize();
                 exercise11.countVowels();
                 exercise11.showDetailVowels();
-
+            case 12:
+                Exercise12 exercise12 = new Exercise12();
+                exercise12.requestWords();
+                exercise12.wordsDifference();
+                exercise12.isEqual();
+                exercise12.isDifferent();
         }
     }
 
@@ -80,6 +85,7 @@ public class Main {
         System.out.println("9. Replace 'a' with 'e' ");
         System.out.println("10. Delete spaces");
         System.out.println("11. Count total vowels of a phrase");
+        System.out.println("12. Compare two words");
         System.out.print("Option: ");
     }
 
