@@ -68,6 +68,11 @@ public class Main {
                 exercise12.wordsDifference();
                 exercise12.isEqual();
                 exercise12.isDifferent();
+            case 13:
+                Exercise13 exercise13 = new Exercise13();
+                exercise13.generateDateTime();
+                exercise13.formatDateTime();
+                exercise13.showDateTime();
         }
     }
 
@@ -86,6 +91,7 @@ public class Main {
         System.out.println("10. Delete spaces");
         System.out.println("11. Count total vowels of a phrase");
         System.out.println("12. Compare two words");
+        System.out.println("13. Show local date and time");
         System.out.print("Option: ");
     }
 
