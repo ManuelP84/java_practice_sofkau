@@ -73,6 +73,13 @@ public class Main {
                 exercise13.generateDateTime();
                 exercise13.formatDateTime();
                 exercise13.showDateTime();
+            case 14:
+                Exercise14 exercise14 = new Exercise14();
+                exercise14.requestNumber();
+                exercise14.printNumbers();
+
+            default:
+                System.out.println("Sorry, the option is not available!");
         }
     }
 
@@ -92,13 +99,18 @@ public class Main {
         System.out.println("11. Count total vowels of a phrase");
         System.out.println("12. Compare two words");
         System.out.println("13. Show local date and time");
+        System.out.println("14. Show numbers to 1000");
         System.out.print("Option: ");
     }
 
     public static int getOption() {
-        int option;
+        int option=0;
         Scanner keyboard = new Scanner(System.in);
-        option = Integer.parseInt(keyboard.nextLine());
+        try{
+            option = Integer.parseInt(keyboard.nextLine());
+        } catch (Exception e){
+            System.out.println("Please enter a valid int number (between 1 and 17)!");
+        }
         return option;
     }
 }
