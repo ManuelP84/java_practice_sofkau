@@ -31,53 +31,67 @@ public class Main {
                 exercise4.requestPrice();
                 exercise4.calculatePrice();
                 exercise4.showPriceWithIva();
+                break;
             case 5:
                 Exercise5 exercise5 = new Exercise5();
-                exercise5.generateCounter();
+
+                break;
             case 6:
                 Exercise5 exercise6 = new Exercise6();
                 exercise6.generateCounter();
+                break;
             case 7:
                 Exercise7 exercise7 = new Exercise7();
                 exercise7.requestNumber();
                 exercise7.getNumber();
                 exercise7.showNumber();
+                break;
             case 8:
                 Exercise8 exercise8 = new Exercise8();
                 exercise8.requestDay();
                 exercise8.isLabor();
                 exercise8.showIsLabor();
+                break;
             case 9:
                 Exercise9 exercise9 = new Exercise9();
                 exercise9.replaceLetter();
                 exercise9.concatPhrase();
+                break;
             case 10:
                 Exercise10 exercise10 = new Exercise10();
                 exercise10.requestPhrase();
                 String phrase = exercise10.deleteSpaces();
                 exercise10.showPhrase(phrase);
+                break;
             case 11:
                 Exercise11 exercise11 = new Exercise11();
                 exercise11.requestPhrase();
                 exercise11.getPhraseSize();
                 exercise11.countVowels();
                 exercise11.showDetailVowels();
+                break;
             case 12:
                 Exercise12 exercise12 = new Exercise12();
                 exercise12.requestWords();
                 exercise12.wordsDifference();
                 exercise12.isEqual();
                 exercise12.isDifferent();
+                break;
             case 13:
                 Exercise13 exercise13 = new Exercise13();
                 exercise13.generateDateTime();
                 exercise13.formatDateTime();
                 exercise13.showDateTime();
+                break;
             case 14:
                 Exercise14 exercise14 = new Exercise14();
                 exercise14.requestNumber();
                 exercise14.printNumbers();
-
+                break;
+            case 15:
+                Exercise15 exercise15 = new Exercise15();
+                exercise15.mainPanel();
+                break;
             default:
                 System.out.println("Sorry, the option is not available!");
         }
@@ -100,6 +114,7 @@ public class Main {
         System.out.println("12. Compare two words");
         System.out.println("13. Show local date and time");
         System.out.println("14. Show numbers to 1000");
+        System.out.println("15. Gestión Cinematográfica");
         System.out.print("Option: ");
     }
 
