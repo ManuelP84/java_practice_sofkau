@@ -1,4 +1,4 @@
-package com.sofkau.excercises;
+package com.sofkau.exercises1to15;
 
 public class Exercise9 {
     protected final String PHRASE = "La sonrisa sera la mejor arma contra la tristeza";

@@ -1,6 +1,6 @@
 package com.sofkau.main;
 
-import com.sofkau.excercises.*;
+import com.sofkau.exercises1to15.*;
 
 import java.util.Scanner;
 
@@ -92,6 +92,8 @@ public class Main {
                 Exercise15 exercise15 = new Exercise15();
                 exercise15.mainPanel();
                 break;
+            case 16:
+
             default:
                 System.out.println("Sorry, the option is not available!");
         }
@@ -115,6 +117,7 @@ public class Main {
         System.out.println("13. Show local date and time");
         System.out.println("14. Show numbers to 1000");
         System.out.println("15. Gestión Cinematográfica");
+        System.out.println("16. ");
         System.out.print("Option: ");
     }
 

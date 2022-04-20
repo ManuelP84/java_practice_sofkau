@@ -1,4 +1,4 @@
-package com.sofkau.excercises;
+package com.sofkau.exercises1to15;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

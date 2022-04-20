@@ -1,6 +1,4 @@
-package com.sofkau.excercises;
-
-import org.omg.CORBA.PUBLIC_MEMBER;
+package com.sofkau.exercises1to15;
 
 import java.util.Scanner;
 

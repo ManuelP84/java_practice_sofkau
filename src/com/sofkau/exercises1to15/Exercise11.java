@@ -1,7 +1,5 @@
-package com.sofkau.excercises;
+package com.sofkau.exercises1to15;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Exercise11 {

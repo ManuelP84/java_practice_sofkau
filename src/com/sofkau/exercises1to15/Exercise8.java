@@ -1,6 +1,5 @@
-package com.sofkau.excercises;
+package com.sofkau.exercises1to15;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Exercise8 {

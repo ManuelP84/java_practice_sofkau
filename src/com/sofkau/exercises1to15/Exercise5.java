@@ -1,4 +1,4 @@
-package com.sofkau.excercises;
+package com.sofkau.exercises1to15;
 
 public class Exercise5 {
     public void generateCounter(){

@@ -1,4 +1,4 @@
-package com.sofkau.excercises;
+package com.sofkau.exercises1to15;
 
 public class Exercise1 {
     protected float score1 = 4.8F;
