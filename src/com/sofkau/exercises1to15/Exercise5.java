@@ -1,9 +1,9 @@
 package com.sofkau.exercises1to15;
 
 public class Exercise5 {
-    public void generateCounter(){
+    public void generateCounter() {
         int counter = 1;
-        while(counter<=100){
+        while (counter <= 100) {
             showNumber(counter);
             counter++;
         }
@@ -15,11 +15,10 @@ public class Exercise5 {
         return isEven;
     }
 
-    public void showNumber(int counter){
-        if(isEven(counter)){
+    public void showNumber(int counter) {
+        if (isEven(counter)) {
             System.out.println("Even: " + counter);
-        }
-        else {
+        } else {
             System.out.println("Odd: " + counter);
         }
     }

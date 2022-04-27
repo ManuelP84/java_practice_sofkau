@@ -3,17 +3,17 @@ package com.sofkau.exercise16.models;
 import java.util.Random;
 
 public class Person {
-    private String name;
-    private Integer age;
-    private String dni;
-    private String gender;
-    private Double height;
-    private Double weight;
-    private final String HOMBRE = "H";
-    private final String MUJER = "M";
-    private Double imc;
+    private       String  name;
+    private       Integer age;
+    private       String  dni;
+    private       String  gender;
+    private       Double  height;
+    private       Double  weight;
+    private final String  HOMBRE = "H";
+    private final String  MUJER  = "M";
+    private       Double  imc;
 
-    public Person(){
+    public Person() {
         this.name = "";
         this.age = 0;
         this.gender = "";
@@ -35,18 +35,19 @@ public class Person {
         this.name = name;
         this.age = age;
         this.dni = dni;
-        this.gender = gender.toUpperCase();;
+        this.gender = gender.toUpperCase();
+        ;
         this.height = height;
         this.weight = weight;
         generateDNI();
     }
 
-    public int calcularIMC(){
-        this.imc = (this.weight)/(Math.pow(this.height, 2));
+    public int calcularIMC() {
+        this.imc = (this.weight) / (Math.pow(this.height, 2));
         int value;
-        if (this.imc < 20){
+        if (this.imc < 20) {
             value = -1;
-        } else if(this.imc >= 20 && this.imc <= 25) {
+        } else if (this.imc >= 20 && this.imc <= 25) {
             value = 0;
         } else {
             value = 1;
@@ -54,16 +55,16 @@ public class Person {
         return value;
     }
 
-    public boolean esMayorDeEdad(){
-        return this.age>18?true:false;
+    public boolean esMayorDeEdad() {
+        return this.age > 18 ? true : false;
     }
 
-    public void comprobarSexo(String gender){
+    public void comprobarSexo(String gender) {
         gender = gender.toUpperCase();
         String compareGender;
-        if (gender == "M"){
+        if (gender == "M") {
             compareGender = "M";
-        } else{
+        } else {
             compareGender = "M";
         }
         System.out.println("The gender is: " + compareGender);
@@ -79,25 +80,25 @@ public class Person {
                 "Person weight is: " + weight + "\n";
     }
 
-    public void generateDNI(){
-        String characters="TRWAGMYFPDXBNJZSQVHLCKE";
+    public void generateDNI() {
+        String characters = "TRWAGMYFPDXBNJZSQVHLCKE";
         int charIndex;
         String dniLetter;
         int dniNumber = createRandomNumber();
 
-        charIndex = dniNumber%23;
+        charIndex = dniNumber % 23;
         dniLetter = String.valueOf(characters.charAt(charIndex));
         this.dni = dniNumber + dniLetter;
     }
 
-    private int createRandomNumber(){
+    private int createRandomNumber() {
         int dniNumber;
         int count = 0;
         int number;
-        String stringDniNumber ="";
+        String stringDniNumber = "";
         Random rand = new Random();
 
-        while (count < 8){
+        while (count < 8) {
             number = rand.nextInt(10);
             stringDniNumber = stringDniNumber + number;
             count++;

@@ -9,12 +9,26 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
-        //Electrodomestico electrodomesticos[] = new Electrodomestico[3];
-        //Lavadora lavadoras[] = new Lavadora[3];
-        List<Electrodomestico> electrodomesticos = new ArrayList<Electrodomestico>();
 
+    static List<Electrodomestico> electrodomesticos = new ArrayList<Electrodomestico>();
+
+    public static void main(String[] args) {
+
+        crearElectrodomesticos(4);
+        crearLavadoras(4);
+        crearTelevisores(5);
+
+        for (Electrodomestico electrodomestico : electrodomesticos) {
+            electrodomestico.precioFinal();
+        }
+
+        for (Electrodomestico electrodomestico : electrodomesticos) {
+            System.out.println(electrodomestico);
+        }
+    }
+
+    public static void crearElectrodomesticos(Integer totalElectrodomesticos) {
+        // Creamos electrodomesticos
         Double precio;
         String color;
         String consumoEnergetico;
@@ -22,13 +36,12 @@ public class Main {
         Integer carga;
         Double resolucion;
         String sintonizador;
+        Scanner keyboard = new Scanner(System.in);
 
-
-        // Creamos 4 electrodomesticos
         System.out.println("********************************************************************");
         System.out.println("Por favor ingresa la información de los electrodomesticos...");
         System.out.println("********************************************************************");
-        for (int index=1; index<5; index++){
+        for (int index = 1; index < totalElectrodomesticos + 1; index++) {
             System.out.println("Please enter the price from the item: " + index);
             precio = Double.parseDouble(keyboard.nextLine());
             System.out.println("Please enter the color from the item: " + index);
@@ -40,12 +53,21 @@ public class Main {
 
             electrodomesticos.add(new Electrodomestico(precio, peso, color, consumoEnergetico));
         }
+    }
 
-        // Creamos 3 lavadoras
+    public static void crearLavadoras(Integer totalLavadoras) {
+        // Creamos lavadoras
+        Double precio;
+        String color;
+        String consumoEnergetico;
+        Double peso;
+        Integer carga;
+        Scanner keyboard = new Scanner(System.in);
+
         System.out.println("********************************************************************");
         System.out.println("Por favor ingresa la información de las lavadoras...");
         System.out.println("********************************************************************");
-        for (int index=1; index<4; index++){
+        for (int index = 1; index < totalLavadoras + 1; index++) {
             System.out.println("Please enter the price from the item: " + index);
             precio = Double.parseDouble(keyboard.nextLine());
             System.out.println("Please enter the color from the item: " + index);
@@ -59,12 +81,23 @@ public class Main {
 
             electrodomesticos.add(new Lavadora(carga, precio, peso, color, consumoEnergetico));
         }
+    }
 
-        // Creamos 3 televisores
+    public static void crearTelevisores(Integer totalElectrodomesticos) {
+        // Creamos televisores
+        Double precio;
+        String color;
+        String consumoEnergetico;
+        Double peso;
+        Integer carga;
+        Double resolucion;
+        String sintonizador;
+        Scanner keyboard = new Scanner(System.in);
+
         System.out.println("********************************************************************");
         System.out.println("Por favor ingresa la información de los televisores...");
         System.out.println("********************************************************************");
-        for (int index=1; index<4; index++){
+        for (int index = 1; index < totalElectrodomesticos + 1; index++) {
             System.out.println("Please enter the price from the item: " + index);
             precio = Double.parseDouble(keyboard.nextLine());
             System.out.println("Please enter the color from the item: " + index);
@@ -79,14 +112,6 @@ public class Main {
             sintonizador = keyboard.nextLine();
 
             electrodomesticos.add(new Television(resolucion, sintonizador, precio, peso, color, consumoEnergetico));
-        }
-
-        for (Electrodomestico electrodomestico : electrodomesticos){
-            electrodomestico.precioFinal();
-        }
-
-        for (Electrodomestico electrodomestico : electrodomesticos){
-            System.out.println(electrodomestico);
         }
     }
 }

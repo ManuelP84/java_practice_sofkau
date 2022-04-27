@@ -1,11 +1,11 @@
 package com.sofkau.exercise17.models;
 
-public class Television extends Electrodomestico{
-    protected Double resolucion;
+public class Television extends Electrodomestico {
+    protected Double  resolucion;
     protected Boolean sintonizador = false;
 
 
-    public Television(){
+    public Television() {
         super();
         this.resolucion = 20.0;
         this.sintonizador = false;
@@ -23,26 +23,26 @@ public class Television extends Electrodomestico{
         this.sintonizador = validarSintonizador(sintonizador);
     }
 
-    public Boolean validarSintonizador(String sintonizador){
+    public Boolean validarSintonizador(String sintonizador) {
         String upperLetter = sintonizador.toUpperCase();
-        return upperLetter.equals("S")?true:false;
+        return upperLetter.equals("S") ? true : false;
     }
 
     @Override
-    public void precioFinal(){
+    public void precioFinal() {
         Double tempPrice = this.precioBase;
         super.precioFinal();
-        if(this.resolucion > 40){
-            this.precioFinal += tempPrice*0.3;
+        if (this.resolucion > 40) {
+            this.precioFinal += tempPrice * 0.3;
         }
-        if (this.sintonizador){
+        if (this.sintonizador) {
             this.precioFinal += 50;
         }
     }
 
     @Override
     public String toString() {
-        return  "PrecioBase: " + precioBase + "\n" +
+        return "PrecioBase: " + precioBase + "\n" +
                 "PrecioFinal: " + precioFinal + "\n" +
                 "Color: " + precioBase + "\n" +
                 "ConsumoEnergetico: " + consumoEnergetico + "\n" +

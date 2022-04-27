@@ -12,34 +12,34 @@ public class Electrodomestico implements IElectrodomestico {
 
     // Constructores
 
-    public Electrodomestico(){
+    public Electrodomestico() {
         this.color = "Blanco";
         this.consumoEnergetico = "F";
         this.precioBase = 100.0;
         this.peso = 5.0;
     }
 
-    public Electrodomestico(Double precioBase, Double peso){
+    public Electrodomestico(Double precioBase, Double peso) {
         this.precioBase = precioBase;
         this.peso = peso;
         this.color = "Blanco";
         this.consumoEnergetico = "F";
     }
 
-    public Electrodomestico(Double precioBase, Double peso, String color, String consumoEnergetico){
+    public Electrodomestico(Double precioBase, Double peso, String color, String consumoEnergetico) {
         this.precioBase = precioBase;
         this.peso = peso;
-        this.color = comprobarColor(color)?color:"Blanco";
-        this.consumoEnergetico = comprobarConsumo(consumoEnergetico)?consumoEnergetico.toUpperCase():"F";
+        this.color = comprobarColor(color) ? color : "Blanco";
+        this.consumoEnergetico = comprobarConsumo(consumoEnergetico) ? consumoEnergetico.toUpperCase() : "F";
     }
 
-    private Boolean comprobarConsumo(String letra){
+    private Boolean comprobarConsumo(String letra) {
         String validLetters = "ABCDEF";
         String upperLetter = letra.toUpperCase();
         return validLetters.contains(upperLetter);
     }
 
-    private Boolean comprobarColor(String color){
+    private Boolean comprobarColor(String color) {
         Boolean isColorOk = false;
         String coloresDisponibles[] = new String[5];
         coloresDisponibles[0] = "blanco";
@@ -48,19 +48,19 @@ public class Electrodomestico implements IElectrodomestico {
         coloresDisponibles[3] = "azul";
         coloresDisponibles[4] = "gris";
 
-        for(String cadena : coloresDisponibles){
-            isColorOk = cadena == color?true:false;
+        for (String cadena : coloresDisponibles) {
+            isColorOk = cadena == color ? true : false;
         }
-        return  isColorOk;
+        return isColorOk;
     }
 
-    public void precioFinal(){
+    public void precioFinal() {
         this.precioFinal = this.precioBase + sumaPrecioConsumo() + sumaPrecioTamanio();
     }
 
-    private double sumaPrecioConsumo(){
+    private double sumaPrecioConsumo() {
         Double valorAdicional = 0.0;
-        switch (this.consumoEnergetico){
+        switch (this.consumoEnergetico) {
             case "A":
                 valorAdicional = 100.0;
                 break;
@@ -80,18 +80,18 @@ public class Electrodomestico implements IElectrodomestico {
                 valorAdicional = 10.0;
                 break;
         }
-        return  valorAdicional;
+        return valorAdicional;
     }
 
-    private double sumaPrecioTamanio(){
+    private double sumaPrecioTamanio() {
         Double valorAdicional = 0.0;
-        if (this.peso >= 0.0 && this.peso <= 19.0){
+        if (this.peso >= 0.0 && this.peso <= 19.0) {
             valorAdicional = 10.0;
-        }else if (this.peso >= 20.0 && this.peso <= 49.0) {
+        } else if (this.peso >= 20.0 && this.peso <= 49.0) {
             valorAdicional = 50.0;
-        }else if (this.peso >= 50.0 && this.peso <= 79.0) {
+        } else if (this.peso >= 50.0 && this.peso <= 79.0) {
             valorAdicional = 80.0;
-        }else if (this.peso >= 80.0) {
+        } else if (this.peso >= 80.0) {
             valorAdicional = 100.0;
         }
         return valorAdicional;
@@ -117,7 +117,7 @@ public class Electrodomestico implements IElectrodomestico {
 
     @Override
     public String toString() {
-        return  "PrecioBase: " + precioBase + "\n" +
+        return "PrecioBase: " + precioBase + "\n" +
                 "PrecioFinal: " + precioFinal + "\n" +
                 "Color: " + precioBase + "\n" +
                 "ConsumoEnergetico: " + consumoEnergetico + "\n" +

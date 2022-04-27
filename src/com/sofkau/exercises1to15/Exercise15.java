@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exercise15 {
 
-    public void showGestionMenu(){
+    public void showGestionMenu() {
 
         System.out.println("******GESTION CINEMATOGRÁFICA******");
         System.out.println("1. NUEVO ACTOR");
@@ -17,17 +17,18 @@ public class Exercise15 {
         System.out.println("8. SALIR");
     }
 
-    public int selectOption(){
+    public int selectOption() {
         int option = 0;
         Scanner keyboard = new Scanner(System.in);
-        try{
+        try {
             option = keyboard.nextInt();
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Please enter a integer number between 1 t 8!");
         }
-        return option;    }
+        return option;
+    }
 
-    public void mainPanel(){
+    public void mainPanel() {
         int option;
         do {
             showGestionMenu();
@@ -36,8 +37,8 @@ public class Exercise15 {
         } while (option != 8);
     }
 
-    public void validateOption(int option){
-        if (option>8 || option<1){
+    public void validateOption(int option) {
+        if (option > 8 || option < 1) {
             System.out.println("Opcion incorrecta!");
         }
     }

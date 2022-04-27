@@ -36,17 +36,17 @@ public class Main {
         videojuegosEntregados = contarVideojuegosEntregados(videojuegos);
 
         // Mostramos las series entregadas
-        for (Serie serie : seriesEntregadas){
+        for (Serie serie : seriesEntregadas) {
             System.out.println(serie);
         }
 
         // Mostramos los videojuegos entregados
-        for (Videojuego videojuego : videojuegosEntregados){
+        for (Videojuego videojuego : videojuegosEntregados) {
             System.out.println(videojuego);
         }
     }
 
-    public static Videojuego[] crearVideojuegos(){
+    public static Videojuego[] crearVideojuegos() {
         Videojuego videojuegos[] = new Videojuego[5];
 
         videojuegos[0] = new Videojuego("Mario Bros 3D", 10, "aventura", "Nintendo");
@@ -58,7 +58,7 @@ public class Main {
         return videojuegos;
     }
 
-    public static Serie[] crearSeries(){
+    public static Serie[] crearSeries() {
         Serie series[] = new Serie[5];
 
         series[0] = new Serie("Los 100", "Netflix", 7, "Suspenso");
@@ -70,22 +70,22 @@ public class Main {
         return series;
     }
 
-    public static List<Serie> contarSeriesEntregadas(Serie[] series){
-        List<Serie>  seriesEntregadas = new ArrayList<Serie>();
+    public static List<Serie> contarSeriesEntregadas(Serie[] series) {
+        List<Serie> seriesEntregadas = new ArrayList<Serie>();
 
-        for(Serie serie : series){
-            if(serie.isEntregado()){
+        for (Serie serie : series) {
+            if (serie.isEntregado()) {
                 seriesEntregadas.add(serie);
             }
         }
         return seriesEntregadas;
     }
 
-    public static List<Videojuego> contarVideojuegosEntregados(Videojuego[] videojuegos){
-        List<Videojuego>  videojuegosEntregados = new ArrayList<Videojuego>();
+    public static List<Videojuego> contarVideojuegosEntregados(Videojuego[] videojuegos) {
+        List<Videojuego> videojuegosEntregados = new ArrayList<Videojuego>();
 
-        for(Videojuego videojuego : videojuegos){
-            if(videojuego.isEntregado()){
+        for (Videojuego videojuego : videojuegos) {
+            if (videojuego.isEntregado()) {
                 videojuegosEntregados.add(videojuego);
             }
         }

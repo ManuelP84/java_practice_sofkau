@@ -3,13 +3,13 @@ package com.sofkau.exercise18.models;
 import com.sofkau.exercise18.interfaces.Entregable;
 
 public class Videojuego implements Entregable {
-    protected String titulo;
+    protected String  titulo;
     protected Integer horasEstimadas;
     protected Boolean entregado;
-    protected String genero;
-    protected String compañia;
+    protected String  genero;
+    protected String  compañia;
 
-    public Videojuego(){
+    public Videojuego() {
         this.horasEstimadas = 10;
         this.entregado = false;
         this.titulo = "";
@@ -17,7 +17,7 @@ public class Videojuego implements Entregable {
         this.compañia = "";
     }
 
-    public Videojuego(String titulo, Integer horasEstimadas){
+    public Videojuego(String titulo, Integer horasEstimadas) {
         this.titulo = titulo;
         this.horasEstimadas = horasEstimadas;
         this.genero = "";
@@ -25,7 +25,7 @@ public class Videojuego implements Entregable {
         this.entregado = false;
     }
 
-    public Videojuego(String titulo, Integer horasEstimadas, String genero, String compañia){
+    public Videojuego(String titulo, Integer horasEstimadas, String genero, String compañia) {
         this.titulo = titulo;
         this.horasEstimadas = horasEstimadas;
         this.genero = genero;
@@ -67,7 +67,7 @@ public class Videojuego implements Entregable {
 
     @Override
     public String toString() {
-        return  "Titulo : " + titulo + "\n" +
+        return "Titulo : " + titulo + "\n" +
                 "Horas estimadas : " + horasEstimadas + "\n" +
                 "Entregado : " + entregado + "\n" +
                 "Genero : " + genero + "\n" +
@@ -88,10 +88,11 @@ public class Videojuego implements Entregable {
     public Boolean isEntregado() {
         return this.entregado;
     }
+
     @Override
     public Integer compareTo(Object object) {
         Videojuego videojuagoComparado = (Videojuego) object;
-                Integer compareNumber = 0;
+        Integer compareNumber = 0;
         if (this.horasEstimadas > videojuagoComparado.horasEstimadas)
             compareNumber = 1;
         if (this.horasEstimadas < videojuagoComparado.horasEstimadas)

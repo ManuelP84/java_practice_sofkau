@@ -1,14 +1,15 @@
 package com.sofkau.exercise16.main;
 
 import com.sofkau.exercise16.models.Person;
+
 import java.util.Scanner;
 
 public class Main {
-    static String name;
+    static String  name;
     static Integer age;
-    static String gender;
-    static Double weight;
-    static Double height;
+    static String  gender;
+    static Double  weight;
+    static Double  height;
 
     public static void main(String[] args) {
         System.out.println("**********************************************");
@@ -40,7 +41,7 @@ public class Main {
         System.out.println("**********************************************");
     }
 
-    public static void requestPersonInfo(){
+    public static void requestPersonInfo() {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Enter the name: ");
         name = keyboard.nextLine();
@@ -54,10 +55,10 @@ public class Main {
         weight = keyboard.nextDouble();
     }
 
-    public static void isGoodCondition(Person person){
+    public static void isGoodCondition(Person person) {
         Integer imc;
         imc = person.calcularIMC();
-        switch (imc){
+        switch (imc) {
             case -1:
                 System.out.println("Below ideal weight");
                 break;

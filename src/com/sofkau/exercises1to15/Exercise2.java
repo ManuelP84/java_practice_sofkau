@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exercise2 extends Exercise1 {
 
-    public void requestData(){
+    public void requestData() {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Please enter the score 1: ");
         score1 = Float.parseFloat(keyboard.nextLine());

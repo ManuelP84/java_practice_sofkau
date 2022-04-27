@@ -2,26 +2,26 @@ package com.sofkau.exercise18.models;
 
 import com.sofkau.exercise18.interfaces.Entregable;
 
-public class Serie implements Entregable{
-    protected String titulo;
+public class Serie implements Entregable {
+    protected String  titulo;
     protected Integer numeroTemporadas;
     protected Boolean entregado;
-    protected String genero;
-    protected String creador;
+    protected String  genero;
+    protected String  creador;
 
-    public Serie(){
+    public Serie() {
         this.numeroTemporadas = 3;
         this.entregado = false;
     }
 
-    public Serie(String titulo, String creador){
+    public Serie(String titulo, String creador) {
         this.titulo = titulo;
         this.creador = creador;
         this.numeroTemporadas = 3;
         this.entregado = false;
     }
 
-    public Serie(String titulo, String creador, Integer numeroTemporadas, String genero){
+    public Serie(String titulo, String creador, Integer numeroTemporadas, String genero) {
         this.titulo = titulo;
         this.creador = creador;
         this.numeroTemporadas = numeroTemporadas;
@@ -63,7 +63,7 @@ public class Serie implements Entregable{
 
     @Override
     public String toString() {
-        return  "Titulo : " + titulo + "\n" +
+        return "Titulo : " + titulo + "\n" +
                 "Creador : " + creador + "\n" +
                 "Número de temporadas : " + numeroTemporadas + "\n" +
                 "Genero : " + genero + "\n" +
@@ -84,9 +84,10 @@ public class Serie implements Entregable{
     public Boolean isEntregado() {
         return this.entregado;
     }
+
     @Override
     public Integer compareTo(Object object) {
-        Serie serieComparada = (Serie)object;
+        Serie serieComparada = (Serie) object;
         Integer compareNumber = 0;
         if (this.numeroTemporadas > serieComparada.numeroTemporadas)
             compareNumber = 1;
